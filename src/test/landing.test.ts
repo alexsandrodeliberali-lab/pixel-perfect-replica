@@ -12,9 +12,9 @@ describe("Regras do treinamento", () => {
   it("utiliza o e-mail oficial de suporte", () => {
     expect(landingConfig.supportEmail).toBe("academy@mentalfullness.com.br");
   });
-  it("oferece investimento único de R$ 49,90", () => {
-    expect(landingConfig.priceBRL).toBe(49.9);
-    expect(formatPrice(landingConfig.priceBRL).replace(/\s/g, " ")).toBe("R$ 49,90");
+  it("oferece investimento único de R$ 39,90", () => {
+    expect(landingConfig.priceBRL).toBe(39.9);
+    expect(formatPrice(landingConfig.priceBRL).replace(/\s/g, " ")).toBe("R$ 39,90");
   });
   it("preserva os parâmetros compatíveis de campanha no checkout", () => {
     const result = checkoutWithCampaign("https://pay.hotmart.com/ABC?off=real", "?utm_source=meta&utm_campaign=campanha&src=anuncio&email=private");

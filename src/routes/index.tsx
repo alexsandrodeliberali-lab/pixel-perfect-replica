@@ -46,11 +46,11 @@ function Index() {
         {checkout ? (
           <Button variant="purchase" size="purchase" asChild>
             <a href={checkout} onClick={() => emitLandingEvent("checkout_click", config.tracking.enabled)}>
-              Quero destravar minhas vendas <ArrowRight aria-hidden="true" />
+              Quero destravar minhas vendas <ArrowRight strokeWidth={2} aria-hidden="true" />
             </a>
           </Button>
         ) : (
-          <Button variant="purchase" size="purchase" disabled>Quero destravar minhas vendas <ArrowRight aria-hidden="true" /></Button>
+          <Button variant="purchase" size="purchase" disabled>Quero destravar minhas vendas <ArrowRight strokeWidth={2} aria-hidden="true" /></Button>
         )}
         <p className="investment">Investimento único de <strong>{formatPrice(config.priceBRL)}</strong></p>
         <p className="purchase-trust"><ShieldCheck size={14} aria-hidden="true" /> Compra segura · Acesso imediato</p>
@@ -65,7 +65,11 @@ function Index() {
         )}
       </section>
       <footer className="institutional-footer">
-        {config.logoUrl && <img className="institutional-logo" src={config.logoUrl} alt="Mental Fullness" loading="lazy" />}
+        {config.logoUrl && (
+          <div className="institutional-logo-frame">
+            <img className="institutional-logo" src={config.logoUrl} alt="Mental Fullness" loading="lazy" />
+          </div>
+        )}
         <p className="institutional-name">Mental Fullness Academy</p>
         <p className="institutional-byline">Uma iniciativa Mental Fullness</p>
         <div className="legal-links">
