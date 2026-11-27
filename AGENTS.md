@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Landing page architecture
+- Keep official assets, destinations, price and inactive tracking settings in `src/lib/landing-config.ts` so the page can be completed without changing presentation code.
+- Keep URL validation, campaign forwarding and formatting in browser-safe `src/lib/landing.ts` with focused rule tests; no backend is needed for this external-checkout page.
+- Render the sales experience at `/` and mount the YouTube iframe only after a visitor clicks; missing official inputs remain inactive rather than using invented content.
