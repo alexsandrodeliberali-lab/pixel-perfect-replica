@@ -1,4 +1,4 @@
-import courseCover from "@/assets/course-cover.jpg.asset.json";
+import bannerHero from "@/assets/banner-hotmart-logo-original.jpg.asset.json";
 import videoCover from "@/assets/video-cover.jpg.asset.json";
 import institutionLogo from "@/assets/mental-fullness-logo.png.asset.json";
 
@@ -10,7 +10,7 @@ export const landingConfig = {
   supportEmail: "academy@mentalfullness.com.br" as string | null,
   privacyUrl: null as string | null,
   termsUrl: null as string | null,
-  bannerUrl: courseCover.url as string | null,
+  bannerUrl: bannerHero.url as string | null,
   videoThumbnailUrl: videoCover.url as string | null,
   logoUrl: institutionLogo.url as string | null,
   tracking: {

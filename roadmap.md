@@ -4,4 +4,5 @@
 - [x] Validar página, reprodução real, checkout, suporte e testes nas larguras 320, 360, 390, 430, 768 e 1440.
 - [x] Receber banner original e configurar vídeo e checkout oficiais fornecidos.
 - [x] Inserir logotipo original e ativar o e-mail de suporte recebidos.
+- [x] Substituir o banner principal pelo anexo oficial com logo.
 - [ ] Ativar documentos legais (aguardando conteúdos ou URLs oficiais).
