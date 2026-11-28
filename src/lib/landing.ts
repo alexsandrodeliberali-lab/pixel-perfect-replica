@@ -39,7 +39,11 @@ export function formatPrice(value: number): string {
 }
 
 // Ponto de integração, sem pixels, rede ou registro de conversões fictícias.
-export function emitLandingEvent(name: "page_view" | "video_start" | "checkout_click", enabled: boolean) {
+export function emitLandingEvent(
+  name: "page_view" | "video_start" | "checkout_click",
+  enabled: boolean,
+  meta?: Record<string, string>,
+) {
   if (!enabled) return;
-  window.dispatchEvent(new CustomEvent("mental-fullness:event", { detail: { name } }));
+  window.dispatchEvent(new CustomEvent("mental-fullness:event", { detail: { name, ...meta } }));
 }

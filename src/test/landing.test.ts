@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { landingConfig } from "@/lib/landing-config";
-import { checkoutWithCampaign, formatPrice, youtubeId } from "@/lib/landing";
+import { checkoutWithCampaign, emitLandingEvent, formatPrice, youtubeId } from "@/lib/landing";
 
 describe("Regras do treinamento", () => {
   it("utiliza o vídeo oficial informado", () => {
@@ -40,5 +40,16 @@ describe("Regras do treinamento", () => {
   it("mantém rastreamento desativado sem configuração e consentimento", () => {
     expect(landingConfig.tracking.enabled).toBe(false);
     expect(landingConfig.tracking.metaPixelId).toBeNull();
+  });
+  it("distingue a origem do clique no checkout quando rastreamento está ativo", () => {
+    const handler = vi.fn();
+    window.addEventListener("mental-fullness:event", handler);
+    emitLandingEvent("checkout_click", true, { placement: "curriculum" });
+    expect(handler).toHaveBeenCalledTimes(1);
+    expect((handler.mock.calls[0]?.[0] as CustomEvent).detail).toEqual({
+      name: "checkout_click",
+      placement: "curriculum",
+    });
+    window.removeEventListener("mental-fullness:event", handler);
   });
 });
