@@ -21,21 +21,29 @@ export function ConversionBlock({
   placement,
   onCheckoutClick,
 }: ConversionBlockProps) {
+  const label = (
+    <>
+      <span>Quero participar</span>
+      <ArrowRight className="cta-arrow" size={18} strokeWidth={1.85} aria-hidden="true" />
+    </>
+  );
+
   return (
     <div className={showTrust ? "purchase-section" : "purchase-section purchase-section--secondary"}>
       {checkout ? (
         <Button variant="purchase" size="purchase" asChild>
           <a href={checkout} onClick={() => onCheckoutClick(placement)}>
-            Quero participar <ArrowRight strokeWidth={1.85} aria-hidden="true" />
+            {label}
           </a>
         </Button>
       ) : (
         <Button variant="purchase" size="purchase" disabled>
-          Quero participar <ArrowRight strokeWidth={1.85} aria-hidden="true" />
+          {label}
         </Button>
       )}
       <p className="investment">
-        Investimento único de <strong>{formatPrice(priceBRL)}</strong>
+        <span>Investimento único de</span>
+        <strong>{formatPrice(priceBRL)}</strong>
       </p>
       {showTrust && (
         <div className="trust-block">

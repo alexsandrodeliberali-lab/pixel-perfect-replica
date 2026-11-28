@@ -50,15 +50,18 @@ function Index() {
     <main className="sales-page">
       <section className="hero-band">
         {config.bannerUrl && (
-          <div className="banner-container">
-            <img
-              className="course-banner"
-              src={config.bannerUrl}
-              alt="Banner oficial do treinamento Inteligência Comportamental"
-              width="1920"
-              height="640"
-              fetchPriority="high"
-            />
+          <div className="banner-stage">
+            <div className="banner-container">
+              <img
+                className="course-banner"
+                src={config.bannerUrl}
+                alt="Banner oficial do treinamento Inteligência Comportamental"
+                width="1920"
+                height="640"
+                fetchPriority="high"
+              />
+            </div>
+            <div className="banner-transition" aria-hidden="true" />
           </div>
         )}
         <div className="page-container">
@@ -74,6 +77,7 @@ function Index() {
             <VslPlayer
               url={config.youtubeUrl}
               thumbnail={config.videoThumbnailUrl}
+              hasEmbeddedPlayIcon={config.videoThumbnailHasPlayIcon}
               onStart={() => emitLandingEvent("video_start", config.tracking.enabled)}
             />
           </div>

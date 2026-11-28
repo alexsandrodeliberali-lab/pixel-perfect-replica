@@ -61,7 +61,7 @@ export function CurriculumSection() {
           <span className="section-accent-line" aria-hidden="true" />
         </div>
         <div className="curriculum-icon-box" aria-hidden="true">
-          <BookOpen size={24} strokeWidth={1.75} />
+          <BookOpen size={22} strokeWidth={1.65} />
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export function CurriculumSection() {
                   <span className="module-number">{mod.number}</span>
                   <span className="module-title">{mod.title}</span>
                 </span>
-                <ChevronDown size={18} strokeWidth={1.75} className="module-chevron" aria-hidden="true" />
+                <ChevronDown size={17} strokeWidth={1.65} className="module-chevron" aria-hidden="true" />
               </AccordionPrimitive.Trigger>
             </AccordionPrimitive.Header>
             <AccordionPrimitive.Content className="accordion-content">
@@ -88,14 +88,14 @@ export function CurriculumSection() {
             <AccordionPrimitive.Trigger className="bonus-trigger">
               <span className="bonus-trigger-left">
                 <span className="bonus-gift-icon" aria-hidden="true">
-                  <Gift size={20} strokeWidth={1.75} />
+                  <Gift size={19} strokeWidth={1.65} />
                 </span>
                 <span className="bonus-heading-group">
                   <span className="bonus-label">Bônus especial</span>
                   <span className="bonus-title">Inteligência Artificial como Copilot</span>
                 </span>
               </span>
-              <ChevronDown size={18} strokeWidth={1.75} className="bonus-chevron" aria-hidden="true" />
+              <ChevronDown size={17} strokeWidth={1.65} className="bonus-chevron" aria-hidden="true" />
             </AccordionPrimitive.Trigger>
           </AccordionPrimitive.Header>
           <AccordionPrimitive.Content className="accordion-content">

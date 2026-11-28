@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         purchase:
-          "group rounded-[10px] bg-[#68B83D] text-[#101810] font-medium tracking-[-0.01em] shadow-[0_1px_2px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-200 ease-out hover:bg-[#73C447] hover:-translate-y-px hover:shadow-[0_8px_20px_rgba(104,184,61,0.2),inset_0_1px_0_rgba(255,255,255,0.26)] active:translate-y-0 active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-100 disabled:cursor-not-allowed [&_svg]:transition-transform [&_svg]:duration-200 [&_svg]:ease-out group-hover:[&_svg]:translate-x-0.5",
+          "group relative rounded-[12px] bg-[#68B83D] text-[#101810] font-medium tracking-[-0.01em] shadow-[0_1px_2px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.22)] transition-all duration-200 ease-out hover:bg-[#74C648] active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-100 disabled:cursor-not-allowed [&_svg]:transition-transform [&_svg]:duration-200 [&_svg]:ease-out",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
@@ -20,7 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        purchase: "min-h-[50px] w-full max-w-[360px] px-6 py-3.5 text-[15px] leading-snug whitespace-normal gap-2",
+        purchase: "min-h-[54px] w-full sm:max-w-[380px] px-12 py-3.5 text-[16px] leading-none whitespace-nowrap",
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",

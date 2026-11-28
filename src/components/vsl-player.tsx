@@ -1,11 +1,25 @@
 import { useState } from "react";
+import { Play } from "lucide-react";
 import { youtubeId } from "@/lib/landing";
 
+interface VslPlayerProps {
+  url: string | null;
+  thumbnail: string | null;
+  hasEmbeddedPlayIcon?: boolean;
+  onStart: () => void;
+}
+
 /**
- * Interactive 16:9 VSL stage that renders the custom thumbnail as a single
- * accessible trigger and mounts the YouTube iframe only upon visitor action.
+ * Interactive 16:9 VSL stage that displays the thumbnail edge-to-edge without
+ * pillarbox/letterbox gaps, shows a single centered play affordance when needed,
+ * and mounts the YouTube iframe only after visitor interaction.
  */
-export function VslPlayer({ url, thumbnail, onStart }: { url: string | null; thumbnail: string | null; onStart: () => void }) {
+export function VslPlayer({
+  url,
+  thumbnail,
+  hasEmbeddedPlayIcon = false,
+  onStart,
+}: VslPlayerProps) {
   const id = youtubeId(url);
   const [playing, setPlaying] = useState(false);
 
@@ -43,6 +57,11 @@ export function VslPlayer({ url, thumbnail, onStart }: { url: string | null; thu
               loading="eager"
               decoding="async"
             />
+          )}
+          {!hasEmbeddedPlayIcon && (
+            <span className="video-play-badge" aria-hidden="true">
+              <Play size={22} strokeWidth={1.75} className="video-play-icon" />
+            </span>
           )}
         </button>
       )}
