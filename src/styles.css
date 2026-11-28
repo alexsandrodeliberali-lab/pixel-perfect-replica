@@ -96,7 +96,7 @@
   --surface-navy: oklch(0.218 0.072 254);
   --surface-bonus: oklch(0.296 0.022 152);
   --video: oklch(0.178 0.005 248);
-  --detail: oklch(0.783 0.007 248);
+  --detail: oklch(0.822 0.008 248);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(1 0 0 / 8%);
@@ -171,7 +171,7 @@
 .banner-stage { position: relative; background: linear-gradient(180deg, var(--surface-deep) 0%, var(--background) 100%); }
 .banner-container { width: min(100%, 960px); margin-inline: auto; }
 .banner-transition {
-  height: 16px;
+  height: 12px;
   background: linear-gradient(180deg, color-mix(in oklch, var(--surface-navy) 32%, var(--background)) 0%, var(--background) 100%);
   border-top: 1px solid oklch(1 0 0 / 6%);
 }
@@ -181,7 +181,7 @@
   padding-bottom: 36px;
 }
 .course-banner { width: 100%; aspect-ratio: 3 / 1; display: block; object-fit: contain; }
-.course-heading { padding-top: 4px; text-align: left; }
+.course-heading { padding-top: 2px; text-align: left; }
 .course-identity { display: flex; flex-direction: column; gap: 2px; }
 .course-heading h1 {
   color: var(--foreground);
@@ -205,14 +205,14 @@
   height: 2px;
   background-color: var(--primary);
   border-radius: 9999px;
-  margin: 12px 0;
+  margin: 9px 0;
 }
 .course-intro {
   color: oklch(0.89 0.005 248);
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.48;
-  margin: 0 0 16px;
+  line-height: 1.42;
+  margin: 0 0 13px;
 }
 
 .vsl-section { width: 100%; }
@@ -281,8 +281,8 @@
 
 .purchase-section { padding-top: 20px; text-align: center; }
 .purchase-section--secondary { padding-top: 28px; }
-.cta-arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
-.group:hover .cta-arrow { transform: translate(2px, -50%); }
+.cta-arrow { flex-shrink: 0; transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1); }
+.group:hover .cta-arrow { transform: translateX(3px); }
 .investment {
   color: var(--detail);
   margin: 12px 0 8px;
@@ -555,12 +555,12 @@ a:focus-visible { outline: 2px solid var(--ring); outline-offset: 5px; border-ra
 
 @media (min-width: 640px) {
   .page-container { padding-inline: 64px; }
-  .banner-transition { height: 24px; }
+  .banner-transition { height: 18px; }
   .hero-band { padding-bottom: 44px; }
-  .course-heading { padding-top: 4px; }
+  .course-heading { padding-top: 2px; }
   .course-heading h1 { font-size: 32px; line-height: 1.18; }
   .course-subtitle { font-size: 18px; }
-  .course-intro { font-size: 15px; margin-bottom: 20px; }
+  .course-intro { font-size: 15px; margin-bottom: 16px; }
   .video-play-badge { width: 68px; height: 68px; }
   .purchase-section { padding-top: 24px; }
   .purchase-section--secondary { padding-top: 32px; }

@@ -23,8 +23,8 @@ export function ConversionBlock({
 }: ConversionBlockProps) {
   const label = (
     <>
-      <span>Quero participar</span>
-      <ArrowRight className="cta-arrow" size={18} strokeWidth={1.85} aria-hidden="true" />
+      <span>Quero destravar minhas vendas</span>
+      <ArrowRight className="cta-arrow" size={17} strokeWidth={1.9} aria-hidden="true" />
     </>
   );
 

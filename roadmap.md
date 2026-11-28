@@ -5,4 +5,7 @@
 - [x] Receber banner original e configurar vídeo e checkout oficiais fornecidos.
 - [x] Inserir logotipo original e ativar o e-mail de suporte recebidos.
 - [x] Substituir o banner principal pelo anexo oficial com logo.
+- [x] Substituir o banner principal pela imagem vibrante enviada.
+- [x] Aplicar refinamentos: preço R$ 39,90, textos à esquerda, logotipo sem fundo branco, espaçamentos, CTA literal e legibilidade.
+- [ ] Incorporar a capa personalizada do vídeo (aguardando a imagem enviada).
 - [ ] Ativar documentos legais (aguardando conteúdos ou URLs oficiais).

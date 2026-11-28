@@ -1,6 +1,6 @@
-import bannerHero from "@/assets/banner-hotmart-logo-original.jpg.asset.json";
+import bannerHero from "@/assets/banner-mental-fullness-academy-vibrante.png.asset.json";
 import videoCover from "@/assets/video-cover.jpg.asset.json";
-import institutionLogo from "@/assets/mental-fullness-logo.png.asset.json";
+import institutionLogo from "@/assets/mental-fullness-logo-circle.png.asset.json";
 
 // PENDENTE: substituir os campos null apenas pelos materiais e destinos oficiais.
 export const landingConfig = {
